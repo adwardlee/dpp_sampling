@@ -1,6 +1,6 @@
-%matrix = load('/home/llj/tensorflow_s2vt/matlab_multitask_train_feature.txt');
-%matrix = load('/home/llj/tensorflow_s2vt/matlab_multitask_val_feature.txt');
-%matrix = load('/home/llj/tensorflow_s2vt/matlab_multitask_test_feature.txt');
+%matrix = load('/tensorflow_s2vt/matlab_train_feature.txt');
+%matrix = load('/tensorflow_s2vt/matlab_val_feature.txt');
+%matrix = load('//tensorflow_s2vt/matlab_test_feature.txt');
 
 val = 1200;
 train = 0;
@@ -12,7 +12,7 @@ test = 1300;
 files = fopen('10frame_dpp_median','a');
 
 for i=1:1970
-    filename = sprintf('/home/llj/tensorflow_s2vt/features_for_dpp/feature_vid%d',i);
+    filename = sprintf('/tensorflow_s2vt/features_for_dpp/feature_vid%d',i);
     matrix = load(filename);
     feature = matrix;
     K = gaussian_kernel(feature);
